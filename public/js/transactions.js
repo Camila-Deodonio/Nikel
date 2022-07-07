@@ -26,7 +26,7 @@ document.getElementById("transaction-form").addEventListener("submit", function(
     myModal.hide();
 
     getTransactions();
-
+   
     alert("Lançamento adicionado com sucesso.");
 
 });
@@ -37,7 +37,6 @@ function checkLogged() {
     if(session) {
         sessionStorage.setItem("logged", session);
         logged = session;
-
     }
  
     if(!logged) {
@@ -51,14 +50,13 @@ function checkLogged() {
     }
 
     getTransactions();
-
 }
 
 function logout() {
     sessionStorage.removeItem("logged");
     localStorage.removeItem("session");
 
-    window.location.href = "index.html";
+    window.location.href = "index.html";   
 }
 
 function getTransactions() {
@@ -78,7 +76,7 @@ function getTransactions() {
                     <th scope="row">${item.date}</th>
                     <td>${item.value.toFixed(2)}</td>
                     <td>${type}</td>
-                    <td>${item.description}</th>
+                    <td>${item.description}</td>
                 </tr>
             `
         })

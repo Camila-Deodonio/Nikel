@@ -58,6 +58,7 @@ function checkLogged() {
     getCashIn();
     getCashOut();
     getTotal();
+
 }
 
 function logout() {
